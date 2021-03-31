@@ -4,3 +4,6 @@ main: fr.jaggernaute.bouillancube.bouillancube.Bouillancube
 api-version: 1.16
 authors: [ Jaggernaute ]
 description: Private plugin-in for Bouillancube only
+commands:
+  gui:
+    description: Ouvre le GUI

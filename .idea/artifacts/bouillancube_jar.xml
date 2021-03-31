@@ -2,7 +2,7 @@
   <artifact type="jar" name="bouillancube:jar">
     <output-path>$PROJECT_DIR$/..</output-path>
     <root id="archive" name="untitled.jar">
-      <element id="module-output" name="untitled" />
+      <element id="module-output" name="bouillancube" />
     </root>
   </artifact>
 </component>
