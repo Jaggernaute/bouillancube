@@ -13,7 +13,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.awt.*;
 
-public class GUICommands implements CommandExecutor {
+public class GUI1Commands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender,Command command, String label, String[] args){
@@ -21,18 +21,21 @@ public class GUICommands implements CommandExecutor {
         if(sender instanceof Player){
             Player player = (Player)sender;
 
+            /* ###################################################
+            * #######################menu1########################
+            * ####################################################*/
             //creation de l'inventaire [taille: 9; titre: Custom GUI (AQUA)]
-            Inventory gui = Bukkit.createInventory(player, 9, "Pour la gloire de Xavier !");
+            Inventory gui1 = Bukkit.createInventory(null , 63, "Pour la gloire de Xavier !");
 
             //creation des 3 options du menu + leurs meta
             ItemStack anvil = new ItemStack(Material.ANVIL);
             ItemMeta anvil_meta = anvil.getItemMeta();
-            anvil_meta.setDisplayName("Anvil kill");
+            anvil_meta.setDisplayName("It's hammer time !");
             anvil.setItemMeta(anvil_meta);
 
             ItemStack sword = new ItemStack(Material.DIAMOND_SWORD);
             ItemMeta sword_meta = sword.getItemMeta();
-            sword_meta.setDisplayName("Sword kill");
+            sword_meta.setDisplayName("Excaliburne");
             sword.setItemMeta(sword_meta);
 
             ItemStack tnt = new ItemStack(Material.TNT);
@@ -40,9 +43,10 @@ public class GUICommands implements CommandExecutor {
             tnt_meta.setDisplayName("KABOOM !");
             tnt.setItemMeta(tnt_meta);
 
-            ItemStack[] menu_items = {anvil, sword, tnt};    //array comportant les items du menu
-            gui.setContents(menu_items);    //insertion des items dans le GUI
-            player.openInventory(gui);  //ouverture du GUI
+            ItemStack[] menu_items1 = {anvil, sword, tnt};    //array comportant les items du menu
+            gui1.setContents(menu_items1);    //insertion des items dans le GUI
+            player.openInventory(gui1);  //ouverture du GUI
+
         }
 
         return true;
