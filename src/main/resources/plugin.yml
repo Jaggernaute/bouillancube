@@ -1,6 +1,6 @@
 name: Bouillancube
 version: ${project.version}
-main: fr.jaggernaute.bouillancube.bouillancube.Bouillancube
+main: fr.jaggernaute.bouillancube.Bouillancube
 api-version: 1.16
 authors: [ Jaggernaute ]
 description: Private plugin-in for Bouillancube only

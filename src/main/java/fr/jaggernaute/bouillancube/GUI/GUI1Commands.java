@@ -1,4 +1,4 @@
-package fr.jaggernaute.bouillancube.bouillancube.GUI;
+package fr.jaggernaute.bouillancube.GUI;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -25,7 +25,7 @@ public class GUI1Commands implements CommandExecutor {
             * #######################menu1########################
             * ####################################################*/
             //creation de l'inventaire [taille: 9; titre: Custom GUI (AQUA)]
-            Inventory gui1 = Bukkit.createInventory(null , 63, "Pour la gloire de Xavier !");
+            Inventory gui1 = Bukkit.createInventory(null , 27, "Pour la gloire de Xavier !");
 
             //creation des 3 options du menu + leurs meta
             ItemStack anvil = new ItemStack(Material.ANVIL);
