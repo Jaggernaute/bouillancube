@@ -12,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 import static fr.jaggernaute.bouillancube.gui.GUI2Commands.gui2;
 
 
@@ -31,7 +33,7 @@ public class Menu1Handler implements Listener {
             if(e.getCurrentItem() == null){
                 return;
             }
-            else if(e.getCurrentItem().getType().equals(Material.ANVIL)){
+            else if(e.getCurrentItem().getType().equals(Material.PLAYER_HEAD) && e.getCurrentItem().getItemMeta().getDisplayName().equals("Reward")){
                 gui2();
             }
             else if(e.getCurrentItem().getType().equals(Material.DIAMOND_SWORD)){
@@ -40,6 +42,9 @@ public class Menu1Handler implements Listener {
             }
             else if(e.getCurrentItem().getType().equals(Material.TNT)){
                 player.sendMessage("KABOOM Rico KABOOM !");
+                player.closeInventory();
+            }
+            else if(e.getCurrentItem().getType().equals(Material.BARRIER)){
                 player.closeInventory();
             }
         }

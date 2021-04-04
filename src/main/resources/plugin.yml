@@ -7,6 +7,3 @@ description: Private plugin-in for Bouillancube only
 commands:
   gui:
     description: Ouvre le GUI1
-
-  gui2:
-    description: Ouvre le GUI2
