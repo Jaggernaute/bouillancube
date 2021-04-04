@@ -1,8 +1,7 @@
 package fr.jaggernaute.bouillancube;
 
-import fr.jaggernaute.bouillancube.GUI.GUI1Commands;
-import fr.jaggernaute.bouillancube.GUI.MenuHandler;
-import fr.jaggernaute.bouillancube.GUI.Scoreboard;
+import fr.jaggernaute.bouillancube.gui.GUI1Commands;
+import fr.jaggernaute.bouillancube.gui.Menu1Handler;
 import fr.jaggernaute.bouillancube.achivement.BreakingHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,9 +15,8 @@ public final class Bouillancube extends JavaPlugin {
 
         Objects.requireNonNull(getCommand("gui")).setExecutor(new GUI1Commands());
 
-        getServer().getPluginManager().registerEvents(new MenuHandler(),this);
+        getServer().getPluginManager().registerEvents(new Menu1Handler(),this);
         getServer().getPluginManager().registerEvents(new BreakingHandler(),this);
-        getServer().getPluginManager().registerEvent(new Scoreboard(),this);
     }
 
     @Override
