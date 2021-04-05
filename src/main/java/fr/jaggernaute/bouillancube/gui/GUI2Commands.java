@@ -8,12 +8,12 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class GUI2Commands extends Menu1Handler {
+public class GUI2Commands extends MenuHandler {
 
     public static void gui2(){
-            Player player = Menu1Handler.player;
+            Player player = MenuHandler.player;
 
-            Inventory gui2 = Bukkit.createInventory(null, 54, "Menu 2");
+            Inventory gui2 = Bukkit.createInventory(null, 54, "miKdo");
 
 
             ItemStack snad = new ItemStack(Material.SAND);
