@@ -23,11 +23,10 @@ public class GUIStatsHome extends MenuHandler {
         skullMob_meta.setDisplayName("Mobs Stats");
         skullMob.setItemMeta(skullMob_meta);
 
-        ItemStack skullBlock = new ItemStack(Material.PLAYER_HEAD);
-        SkullMeta skullBlock_meta = (SkullMeta) skullBlock.getItemMeta();
-        skullBlock_meta.setOwner("grass");
-        skullBlock_meta.setDisplayName("Blocks Stats");
-        skullBlock.setItemMeta(skullBlock_meta);
+        ItemStack dirt = new ItemStack(Material.GRASS_BLOCK);
+        ItemMeta dirt_meta = dirt.getItemMeta();
+        dirt_meta.setDisplayName("Blocks Stats");
+        dirt.setItemMeta(dirt_meta);
 
         ItemStack glass_pane = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
         ItemMeta glass_pane_meta = glass_pane.getItemMeta();
@@ -39,12 +38,17 @@ public class GUIStatsHome extends MenuHandler {
         barrier_meta.setDisplayName("Quitter");
         barrier.setItemMeta(barrier_meta);
 
+        ItemStack arrow = new ItemStack(Material.ARROW);
+        ItemMeta arrow_meta = arrow.getItemMeta();
+        arrow_meta.setDisplayName("Retour");
+        arrow.setItemMeta(arrow_meta);
+
 
         ItemStack[] menu_items = {glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, barrier,
                 glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane,
-                glass_pane, glass_pane, skullMob, glass_pane, glass_pane, glass_pane, skullBlock, glass_pane, glass_pane,
+                glass_pane, glass_pane, skullMob, glass_pane, glass_pane, glass_pane, dirt, glass_pane, glass_pane,
                 glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane,
-                glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane, glass_pane};    //array comportant les items du menu
+                glass_pane, glass_pane, glass_pane, glass_pane, arrow, glass_pane, glass_pane, glass_pane, glass_pane};    //array comportant les items du menu
 
         gui3.setContents(menu_items);    //insertion des items dans le GUI
         player.openInventory(gui3);
