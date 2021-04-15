@@ -5,8 +5,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.InventoryView;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.Objects;
+import java.util.UUID;
 
 import static fr.jaggernaute.bouillancube.gui.GUI1Commands.gui1;
 import static fr.jaggernaute.bouillancube.gui.GUI2Commands.gui2;
@@ -16,6 +20,7 @@ import static fr.jaggernaute.bouillancube.gui.guistats.GUIStatsBlockMenu.GUISand
 import static fr.jaggernaute.bouillancube.gui.guistats.GUIStatsBlockMenu.GUIStone.guiStone;
 import static fr.jaggernaute.bouillancube.gui.guistats.GUIStatsBlockMenu.guiB;
 import static fr.jaggernaute.bouillancube.gui.guistats.GUIStatsHome.gui3;
+import static fr.jaggernaute.bouillancube.gui.guistats.GUIStatsMobMenu.guiM;
 
 
 public class MenuHandler implements Listener {
@@ -55,8 +60,8 @@ public class MenuHandler implements Listener {
                 gui1();
             } else if (e.getCurrentItem().getType().equals(Material.GRASS_BLOCK)) {
                 guiB();
-            } else if (e.getCurrentItem().getType().equals(Material.PLAYER_HEAD) && e.getCurrentItem().getItemMeta().getDisplayName().equals("Mobs Stats")) {
-                gui2();
+            } else if (e.getCurrentItem().getType().equals(Material.SKELETON_SKULL)) {
+                guiM();
             }
         }
 
@@ -82,63 +87,87 @@ public class MenuHandler implements Listener {
             }
         }
 
-            //GUISand
-            if (e.getView().getTitle().equalsIgnoreCase("Sand statistics: ")) {
+        //GUISand
+        if (e.getView().getTitle().equalsIgnoreCase("Sand statistics: ")) {
 
-                e.setCancelled(true);
+            e.setCancelled(true);
 
-                if (e.getCurrentItem() == null) {
-                    return;
-                } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
-                    player.closeInventory();
-                } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
-                    guiB();
-                }
-            }
-
-            //GUIGravel
-            if (e.getView().getTitle().equalsIgnoreCase("Gravel Statistics: ")) {
-
-                e.setCancelled(true);
-
-                if (e.getCurrentItem() == null) {
-                    return;
-                } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
-                    player.closeInventory();
-                } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
-                    guiB();
-                }
-            }
-
-            //GUIStone
-            if (e.getView().getTitle().equalsIgnoreCase("Stone Statistics: ")) {
-
-                e.setCancelled(true);
-
-                if (e.getCurrentItem() == null) {
-                    return;
-                } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
-                    player.closeInventory();
-                } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
-                    guiB();
-                }
-            }
-
-            //GUIDirt
-            if (e.getView().getTitle().equalsIgnoreCase("Dirt Statistics: ")) {
-
-                e.setCancelled(true);
-
-                if (e.getCurrentItem() == null) {
-                    return;
-                } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
-                    player.closeInventory();
-                } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
-                    guiB();
-                }
+            if (e.getCurrentItem() == null) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
+                player.closeInventory();
+            } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
+                guiB();
             }
         }
+
+        //GUIGravel
+        if (e.getView().getTitle().equalsIgnoreCase("Gravel Statistics: ")) {
+
+            e.setCancelled(true);
+
+            if (e.getCurrentItem() == null) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
+                player.closeInventory();
+            } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
+                guiB();
+            }
+        }
+
+        //GUIStone
+        if (e.getView().getTitle().equalsIgnoreCase("Stone Statistics: ")) {
+
+            e.setCancelled(true);
+
+            if (e.getCurrentItem() == null) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
+                player.closeInventory();
+            } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
+                guiB();
+            }
+        }
+
+        //GUIDirt
+        if (e.getView().getTitle().equalsIgnoreCase("Dirt Statistics: ")) {
+
+            e.setCancelled(true);
+
+            if (e.getCurrentItem() == null) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
+                player.closeInventory();
+            } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
+                guiB();
+            }
+        }
+
+        //GUIMobs
+        if (e.getView().getTitle().equalsIgnoreCase("Menu des Mobs")) {
+
+            e.setCancelled(true);
+
+            if (e.getCurrentItem() == null) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.BARRIER)) {
+                player.closeInventory();
+            } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
+                gui3();
+            } else if (e.getCurrentItem().getType().equals(Material.SAND)) {
+                guiSand();
+            } else if (e.getCurrentItem().getType().equals(Material.GRAVEL)) {
+                guiGravel();
+            } else if (e.getCurrentItem().getType().equals(Material.STONE)) {
+                guiStone();
+            } else if (e.getCurrentItem().getType().equals(Material.GRASS_BLOCK)) {
+                guiDirt();
+            }
+
+
+        }
     }
+}
 
 
 

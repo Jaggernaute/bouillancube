@@ -26,22 +26,22 @@ public class GUIStatsBlockMenu extends MenuHandler {
 
         ItemStack sand = new ItemStack(Material.SAND);
         ItemMeta sand_meta = sand.getItemMeta();
-        sand_meta.setDisplayName("Sable: " + (player.getStatistic(MINE_BLOCK, Material.SAND)));
+        sand_meta.setDisplayName("Sable");
         sand.setItemMeta(sand_meta);
 
         ItemStack stone = new ItemStack(Material.STONE);
         ItemMeta stone_meta = stone.getItemMeta();
-        stone_meta.setDisplayName("Stone" + (player.getStatistic(MINE_BLOCK, Material.STONE)));
+        stone_meta.setDisplayName("Stone");
         stone.setItemMeta(stone_meta);
 
         ItemStack gravel = new ItemStack(Material.GRAVEL);
         ItemMeta gravel_meta = gravel.getItemMeta();
-        gravel_meta.setDisplayName("Gravier " + (player.getStatistic(MINE_BLOCK, Material.GRAVEL)));
+        gravel_meta.setDisplayName("Gravier");
         gravel.setItemMeta(gravel_meta);
 
         ItemStack dirt = new ItemStack(Material.GRASS_BLOCK);
         ItemMeta dirt_meta = dirt.getItemMeta();
-        dirt_meta.setDisplayName("Dirt" + (player.getStatistic(MINE_BLOCK, Material.DIRT)));
+        dirt_meta.setDisplayName("Dirt");
         dirt.setItemMeta(dirt_meta);
 
         ItemStack glass_pane = new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE);
