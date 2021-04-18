@@ -5,12 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.InventoryView;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.SkullMeta;
-
-import java.util.Objects;
-import java.util.UUID;
 
 import static fr.jaggernaute.bouillancube.gui.GUI1Commands.gui1;
 import static fr.jaggernaute.bouillancube.gui.GUI2Commands.gui2;
