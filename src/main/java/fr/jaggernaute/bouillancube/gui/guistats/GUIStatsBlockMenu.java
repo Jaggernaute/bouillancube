@@ -11,7 +11,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 
-import static org.bukkit.Statistic.*;
+import static org.bukkit.Statistic.MINE_BLOCK;
+
 
 public class GUIStatsBlockMenu extends MenuHandler {
 
