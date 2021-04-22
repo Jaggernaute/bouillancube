@@ -8,6 +8,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
+import fr.jaggernaute.bouillancube.gui.MenuHandler;
 
 import static org.bukkit.Statistic.MINE_BLOCK;
 
