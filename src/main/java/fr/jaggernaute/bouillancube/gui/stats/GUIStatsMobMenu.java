@@ -1,16 +1,21 @@
-package fr.jaggernaute.bouillancube.gui.guistats;
+package fr.jaggernaute.bouillancube.gui.stats;
 
 import fr.jaggernaute.bouillancube.gui.CreateSkull;
 import fr.jaggernaute.bouillancube.gui.MenuHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import static fr.jaggernaute.bouillancube.gui.CreateMobGUI.createMobGUI;
+
 public class GUIStatsMobMenu extends MenuHandler {
+
+    static boolean state = MenuHandler.claimed;
 
     public static void guiM() {
         Player player = MenuHandler.player;
@@ -110,30 +115,49 @@ public class GUIStatsMobMenu extends MenuHandler {
         player.openInventory(guiM);
     }
 
-    public static class GUIZombie {
+
+    public static void guiZombie() {
+
+        createMobGUI("Stats zombie", EntityType.ZOMBIE, state);
     }
 
-    public static class GUIPillager {
+    public static void guiPillager() {
+
+        createMobGUI("Stats pillager", EntityType.PILLAGER, state);
     }
 
-    public static class GUIEnderman {
+    public static void guiEnderman() {
+
+        createMobGUI("Stats enderman", EntityType.ENDERMAN, state);
     }
 
-    public static class GUIShulker {
+    public static void guiShulker() {
+
+        createMobGUI("Stats shulker", EntityType.SHULKER, state);
     }
 
-    public static class GUIBlaze {
+    public static void guiBlaze() {
+
+        createMobGUI("Stats blaze", EntityType.BLAZE, state);
     }
 
-    public static class GUISpider {
+    public static void guiSpider() {
+
+        createMobGUI("Stats spider", EntityType.SPIDER, state);
     }
 
-    public static class GUICreeper {
+    public static void guiCreeper() {
+
+        createMobGUI("Stats creeper", EntityType.CREEPER, state);
     }
 
-    public static class GUISkeleton {
+    public static void guiSkeleton() {
+
+        createMobGUI("Stats skeleton", EntityType.SKELETON, state);
     }
 
-    public static class GUIWitherSkeleton {
+    public static void guiWitherSkeleton() {
+
+        createMobGUI("Stats wither skeleton", EntityType.WITHER_SKELETON, state);
     }
 }

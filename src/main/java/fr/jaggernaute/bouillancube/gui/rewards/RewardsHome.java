@@ -1,22 +1,20 @@
-package fr.jaggernaute.bouillancube.gui.guistats;
+package fr.jaggernaute.bouillancube.gui.rewards;
 
-import org.bukkit.Bukkit;
+import fr.jaggernaute.bouillancube.gui.MenuHandler;
 import org.bukkit.Material;
-
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import fr.jaggernaute.bouillancube.gui.MenuHandler;
+import static org.bukkit.Bukkit.createInventory;
 
-public class GUIStatsHome extends MenuHandler {
-
-    public static void gui3(){
+public class RewardsHome extends MenuHandler{
+    public static void guiRHome() {
         Player player = MenuHandler.player;
 
-        Inventory gui3 = Bukkit.createInventory(null, 45, "J'aime les stats !");
+        Inventory gui3 = createInventory(null, 45, "Reward");
 
 
         ItemStack skullMob = new ItemStack(Material.SKELETON_SKULL);
