@@ -19,7 +19,7 @@ Bouillancube is a Minecraft  plug-in which track your in-game statistics :
 |Wither <br/>Skeleton||
 
 
- an give rewards when you have reach certains millstones:
+ and give rewards when you have reach certains millstones:
 
  - 5K
  - 15K
