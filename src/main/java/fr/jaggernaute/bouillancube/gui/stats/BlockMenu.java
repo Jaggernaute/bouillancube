@@ -13,10 +13,10 @@ import static fr.jaggernaute.bouillancube.gui.CreateBlockGUI.createBlockGUI;
 
 /**
  * <p>
- * GUIStatsBlockMenu create the Menu for tracking the blocks statistics
+ * BlockMenu create the Menu for tracking the blocks statistics
  *</p>
  * <p>
- * guiB() is the home of the Menu (for choosing the block)
+ * guiB() is the Home of the Menu (for choosing the block)
  *</p>
  * <p>
  * each of the blocks have separate pages/inventories:</p>
@@ -25,9 +25,8 @@ import static fr.jaggernaute.bouillancube.gui.CreateBlockGUI.createBlockGUI;
  *  <p>-guiDirt()</p>
  *  <p>-guiStone()</p>
  */
-public class GUIStatsBlockMenu extends MenuHandler {
+public class BlockMenu extends MenuHandler {
 
-    static boolean state = MenuHandler.claimed;
         public static void guiB() {
             Player player = MenuHandler.player;
 

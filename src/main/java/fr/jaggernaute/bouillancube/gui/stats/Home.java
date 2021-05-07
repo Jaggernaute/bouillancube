@@ -13,7 +13,7 @@ import fr.jaggernaute.bouillancube.gui.MenuHandler;
 
 import static org.bukkit.Bukkit.createInventory;
 
-public class GUIStatsHome extends MenuHandler {
+public class Home extends MenuHandler {
     public static void gui3(){
         Player player = MenuHandler.player;
 

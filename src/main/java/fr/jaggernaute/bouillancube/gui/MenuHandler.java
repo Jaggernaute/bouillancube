@@ -1,5 +1,6 @@
 package fr.jaggernaute.bouillancube.gui;
 
+import fr.jaggernaute.bouillancube.gui.stats.MobMenu;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,15 +11,14 @@ import org.jetbrains.annotations.Nullable;
 
 import static fr.jaggernaute.bouillancube.gui.GUI1Commands.gui1;
 import static fr.jaggernaute.bouillancube.gui.GUI2Commands.gui2;
-import static fr.jaggernaute.bouillancube.gui.stats.GUIStatsBlockMenu.*;
-import static fr.jaggernaute.bouillancube.gui.stats.GUIStatsHome.gui3;
-import static fr.jaggernaute.bouillancube.gui.stats.GUIStatsMobMenu.*;
-import static fr.jaggernaute.bouillancube.gui.stats.GUIStatsMobMenu.guiM;
+import static fr.jaggernaute.bouillancube.gui.stats.BlockMenu.*;
+import static fr.jaggernaute.bouillancube.gui.stats.Home.gui3;
+import static fr.jaggernaute.bouillancube.gui.stats.MobMenu.*;
+import static fr.jaggernaute.bouillancube.gui.stats.MobMenu.guiM;
 
 public class MenuHandler implements Listener {
 
     protected static Player player;
-    protected static boolean claimed = false;
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e) {
@@ -101,7 +101,6 @@ public class MenuHandler implements Listener {
             } else if (e.getCurrentItem().getType().equals(Material.ARROW)) {
                 guiB();
             }else if (e.getCurrentItem().getType().equals(Material.YELLOW_STAINED_GLASS_PANE)){
-                claimed = true;
                 guiSand();
             }
         }
@@ -152,7 +151,7 @@ public class MenuHandler implements Listener {
          * logic for mob menu
          * click on items
          *
-         * @see fr.jaggernaute.bouillancube.gui.stats.GUIStatsMobMenu.guiM();
+         * @see MobMenu.guiM();
          */
 
         if (e.getView().getTitle().equalsIgnoreCase("Menu des Mobs")) {

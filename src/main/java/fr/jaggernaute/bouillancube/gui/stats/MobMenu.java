@@ -13,7 +13,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 
 import static fr.jaggernaute.bouillancube.gui.CreateMobGUI.createMobGUI;
 
-public class GUIStatsMobMenu extends MenuHandler {
+public class MobMenu extends MenuHandler {
 
     static boolean state = MenuHandler.claimed;
 
