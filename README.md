@@ -24,6 +24,9 @@ Bouillancube is a Minecraft  plug-in which track your in-game statistics :
  - 5K
  - 15K
  - 32K
+ - 64K
+ - 128K
+ - 1024K
 
 ### How do I install it ?
 The set up is pretty straight forward you need a Minecraft server on paper 1.16.3 minimum and ... that's all !
