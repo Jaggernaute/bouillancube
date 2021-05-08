@@ -34,8 +34,8 @@ Need info ? Check the [Docs](bouillancecube-docs)
 ### Road map
 If you want to see a new feature feel free to [create a new Issue](https://github.com/Jaggernaute/bouillancube/issues/new). Here are some features which are either under way or planned:
 
-- [ ] feature 1
-- [ ] feature 2
+- [x] detect millestone
+- [ ] give a reward when a millestone si completed
 
 ### License
-Bouillancube is made available under the [tu va me mettre une belle petite license a ton projet]()
+Bouillancube is made available under the [MIT license]()
